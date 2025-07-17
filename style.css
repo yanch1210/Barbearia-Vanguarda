@@ -1,0 +1,316 @@
+/* BASE */
+/* espaço e alinhamento do websit */
+:root {
+    --primaria: #E6B07E;
+    --secundaria: #665E57;
+    --tom-1: #EAD8C7;
+    --tom-2: #B38962;
+    --tom-3: #664E38;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+
+/* posicionamento absoluto */
+.logo-hero {
+    position: absolute;
+    right: -80px;
+    opacity: 07;
+}
+
+body {
+    background-color: var(--tom-1);
+}
+
+.hero {
+    justify-content: space-around;
+    padding: 64px 16px;
+
+    & header {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    & .hero-paragraph {
+        width: 272px;
+        align-self: center;
+    }
+
+    & #hero-slider {
+        margin-top: 16px;
+        justify-content: center;
+    }
+
+    & span {
+        color: var(--tom-3);
+        font-weight: 800;
+    }
+
+    & img {
+        height: 100%;
+    }
+}
+
+.a-barbearia-section {
+    justify-content: space-between;
+
+    & .card {
+        width: 270px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 8px 12px 0px 0px;
+        border-top: 3px;
+        border-right: 3px;
+        border-left: 0px;
+        border-bottom: 0px;
+        border-style: solid;
+
+        background-color: var(--tom-1);
+
+        border-image-source: linear-gradient(30deg,
+                var(--tom-1)60%,
+                var(--tom-3)100%);
+        border-image-slice: 1;
+    }
+
+    & p {
+        margin: 0%;
+    }
+
+    & [role=mask] {
+        width: 420px;
+        height: 420px;
+        border-radius: 100%;
+        position: absolute;
+         align-items: center;
+    }
+
+    & img {
+        width: 100%;
+    }
+
+    & .bolinhas {
+        position: absolute;
+        left: 0px;
+        z-index: -20;
+
+    }
+}
+
+.serviços-section {
+
+    padding: 64px 0px;
+
+    & .bolinhas {
+        width: 270px;
+        height: 48px;
+    }
+
+    & h2 {
+        color: var(--tom-3, #664E38);
+        text-align: center;
+        font-family: "Source Serif 4";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 108%;
+        /* 17.28px */
+    }
+    & article{
+        width: 40%;
+        margin-right: 32px;
+    }
+    & article p {
+        text-align: center;
+    }
+
+    & [role="mask"] {
+        width: 160px;
+        height: 320px;
+        flex-shrink: 0;
+        border-radius: 0px 8px 8px 0px;
+    }
+
+     & [role="mask"] img{
+        height: 140%;
+        transform: scalex(-1);
+     }
+}
+
+
+
+
+
+
+/* componentes */
+section {
+    width: 100%;
+    height: 100svh;
+    padding: 64px 32px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+div[role="logo"] {
+    width: 160px;
+    height: 160px;
+    background-color: black;
+
+    mask-image: url('public/logo.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+
+    -webkit-mask-image: url('public/logo.svg');
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+}
+
+h1 {
+    color: var(--secundaria);
+    font-family: 'Exo', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 100%;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+    margin: 0%;
+}
+
+/* maskara */
+[role="mask"] {
+    filter: drop-shadow(0px 24px 34px rgba(0, 0, 0, 0.15));
+    width: 100%;
+    height: 260px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: -10;
+}
+
+
+/* paragrafo */
+p {
+    font-size: 20px;
+    font-family: "Source Serif 4", serif;
+    color: rgba(0, 0, 0, 0.6);
+
+    &.text-justify {
+        text-align: justify;
+    }
+
+    &.text-sm {
+        font-size: 16px;
+    }
+}
+
+/* botao */
+a {
+    width: fit-content;
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--tom-2) 100%, white 20%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    /* tipografia */
+    color: var(--tom-3, #664E38);
+
+
+    font-family: Exo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+
+    transition: all 150ms;
+
+    &:hover {
+        background: color-mix(in srgb, var(--tom-2) 100%, rgb(0, 0, 0) 20%);
+        color: var(--tom-1);
+    }
+
+    &:active {
+        background: color-mix(in srgb, var(--tom-2) 100%, rgb(255, 255, 255) 40%);
+
+    }
+
+
+}
+
+.bolinhas {
+    width: 300px;
+    height: 300px;
+    background-color: var(--tom-3);
+    mask: url('public/bolinhas.svg');
+    mask-size: 100%;
+
+    &.fileira {
+        mask: url('public/fileira-de-bolinhas.svg') no-repeat center;
+        mask-size: 100%;
+    }
+}
+
+/* utilitarios */
+
+.translate-y-center {
+    translate: 0 -50%;
+    top: 50%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.gap-1 {
+    gap: 4px;
+}
+
+.gap-2 {
+    gap: 8px;
+}
+
+.gap-4 {
+    gap: 16px;
+}
+
+.gap-8 {
+    gap: 32px;
+}
