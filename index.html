@@ -12,12 +12,15 @@
 
     <link rel="stylesheet" href="style.css" />
 
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbearia Vanguarda</title>
 </head>
 
 <body>
+    <!-- seção hero -->
     <section class="hero">
         <div id="header=mask=spacer">
             <header>
@@ -35,6 +38,7 @@
             Obtenha um estilo impecável, do cabelo à barba.
         </p>
     </section>
+    <!-- seção a barbearia -->
     <section class="a-barbearia-section">
         <h1>A Barbearia</h1>
         <div class="bolinhas"> </div>
@@ -47,9 +51,12 @@
                 oferecer cortes, barbas e experiências únicas. Um ambiente pensado
                 para homens que valorizam estilo, conforto e cuidado pessoal.
             </p>
-            <a href="#"> Leia Mais</a>
+            <a 
+             role= "button"
+            href="#"> Leia Mais</a>
         </article>
     </section>
+    <!-- seção serviços -->
     <section class="serviços-section justify-between items-center">
         <p>
             Estilo, cuidado e excelência <br> em cada corte.
@@ -63,13 +70,85 @@
             <article class="flex flex-col justify-around items-center">
                 <h2>corte</h2>
                 <p>Social, degradê, surfista, militar, razor part, undercut</p>
-                <a href="#">Ver mais</a>
+                <a 
+             role= "button"
+                href="#">Ver mais</a>
             </article>
         </div>
 
 
         <div class="bolinhas fileira"></div>
     </section>
+    <!-- seção contato -->
+    <section class="contato-section justify-between">
+        <h1>Entre em contato conosco</h1>
+
+        <div role="mask">
+            <video src="public/video-contato.webm" autoplay muted loop></video>
+        </div>
+
+        <div class="buttons-space flex flex-col gap-2 ">
+            <a 
+             role= "button" 
+            href="mailto:yanc2019@gmail.com">
+                <i data-feather="mail"></i>
+
+
+                Nos envie um email</a>
+            <a 
+            role= "button"
+            class="whatsapp-link"
+                href="https://wa.me/5511949273270?text=%F0%9F%92%88%20Seja%20muito%20bem-vindo%20%C3%A0%20Barbearia%20Vanguarda%20%F0%9F%92%88%20%C3%89%20um%20prazer%20ter%20voc%C3%AA%20por%20aqui!%20Estamos%20prontos%20para%20cuidar%20do%20seu%20estilo%20com%20qualidade%20e%20aten%C3%A7%C3%A3o.%20%E2%9C%82%EF%B8%8F%F0%9F%A7%94%20Fique%20%C3%A0%20vontade%20para%20nos%20chamar!">
+                <div class="whatsapp-icon"></div>
+                Fale conosco
+            </a>
+        </div>
+
+
+    </section>
+    <!-- seção unidades -->
+    <section class="unidades-section gap-8">
+
+        <p>Nossa sede, localizada na zona leste de São Paulo, e as demais unidades, estão abertas todos os dias.
+            <br><br>Confira os horários específicos de cada unidade.
+        </p>
+
+        <div class="map">
+            <div class="map-mask">
+                <img src="public/mask.jpg" alt="">
+            </div>
+            <address class="flex flex-col gap-1">
+                <h2>Av. Marechal Tito 1500</h2>
+                <h3>São MIguel Paulista</h3>
+            </address>
+        </div>
+
+
+
+    </section>
+    <footer>
+        <div class="flex justify-between items-center">
+            <div role="logo"></div>
+            <nav class="flex  gap-4">
+    <a href="#">Contato</a>
+    <a href="#">Unidades</a>
+    <a href="#">Serviços</a>
+    <a href="#">A Barbearia</a>
+    <a href="#">Home</a>
+</nav>
+        </div>
+
+        <div class="flex justify-center">
+            <p>
+                ©Barbearia Vanguarda - Todos os direitos reservados desde 2023
+            </p>
+        </div>
+    </footer>
+    <dialog></dialog>
+    <script>
+        feather.replace();
+    </script>
 </body>
+
 
 </html>
