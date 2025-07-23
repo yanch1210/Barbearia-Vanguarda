@@ -16,6 +16,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
+    <link rel="shortcut icon" href="public/logo-boy.svg" type="image/x-icon">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbearia Vanguarda</title>
@@ -144,7 +146,7 @@
             <br><br>Confira os horários específicos de cada unidade.
         </p>
 
-        <swiper-container space-between="-96">
+        <swiper-container space-between="-96" rewind class="swiper-unidades">
             <swiper-slide>
                 <div class="map">
                     <div class="map-mask">
@@ -216,6 +218,12 @@
     <script>
         feather.replace();
         const menu = document.querySelector("dialog")
+
+        document.querySelector(".swiper-unidades").breakpoints = {
+            400: {
+                spaceBetween: -116
+            }
+        }
     </script>
 </body>
 

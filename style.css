@@ -58,8 +58,8 @@ body {
 }
 
 .a-barbearia-section {
-    justify-content: space-between;
-
+   justify-content: space-between;
+ 
     & .card {
         width: 270px;
         display: flex;
@@ -71,19 +71,19 @@ body {
         border-left: 0px;
         border-bottom: 0px;
         border-style: solid;
-
+ 
         background-color: var(--tom-1);
-
+ 
         border-image-source: linear-gradient(30deg,
                 var(--tom-1)60%,
                 var(--tom-3)100%);
         border-image-slice: 1;
     }
-
+ 
     & p {
         margin: 0%;
     }
-
+ 
     & [role=mask] {
         width: 420px;
         height: 420px;
@@ -91,11 +91,11 @@ body {
         position: absolute;
         align-items: center;
     }
-
+ 
     & img {
         width: 100%;
     }
-
+ 
     & .bolinhas {
         position: absolute;
         left: 0px;
