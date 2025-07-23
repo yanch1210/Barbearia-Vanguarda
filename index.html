@@ -14,6 +14,8 @@
 
     <script src="https://unpkg.com/feather-icons"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbearia Vanguarda</title>
@@ -21,7 +23,7 @@
 
 <body>
 
-      <dialog class="justify-between">
+    <dialog class="justify-between">
         <div role="logo"></div>
         <nav class="flex flex-col  gap-4 ">
             <span><a href="#">Contato</a><i data-feather="phone"></i></span>
@@ -45,7 +47,7 @@
         <div role="logo"></div>
         <i data-feather="menu" onclick="menu.showModal()"></i>
     </nav>
-    
+
     <!-- seção hero -->
     <section class="hero">
         <div id="header=mask=spacer">
@@ -55,7 +57,18 @@
             </header>
 
             <div id="hero-slider" role="mask">
-                <img src="public/cabelo.jpg" alt="Slide 1" />
+                <swiper-container autoplay loop speed="3000">
+                    <swiper-slide>
+                        <img src="public/cabelo.jpg" alt="Slide 1" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="public/slide-2.jpg" alt="Slide 1" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="public/slide-3.jpg" alt="Slide 1" />
+                    </swiper-slide>
+                </swiper-container>
+
             </div>
 
             <div role="hero-slide"></div>
@@ -131,15 +144,52 @@
             <br><br>Confira os horários específicos de cada unidade.
         </p>
 
-        <div class="map">
-            <div class="map-mask">
-                <img src="public/mask.jpg" alt="">
-            </div>
-            <address class="flex flex-col gap-1">
-                <h2>Av. Marechal Tito 1500</h2>
-                <h3>São MIguel Paulista</h3>
-            </address>
-        </div>
+        <swiper-container space-between="-96">
+            <swiper-slide>
+                <div class="map">
+                    <div class="map-mask">
+                        <img src="public/mask.jpg" alt="">
+                    </div>
+                    <address class="flex flex-col gap-1">
+                        <h2>Av. Marechal Tito 1500</h2>
+                        <h3>São MIguel Paulista</h3>
+                    </address>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="map">
+                    <div class="map-mask">
+                        <img src="public/unidade-2.jpg" alt="">
+                    </div>
+                    <address class="flex flex-col gap-1">
+                        <h2>Av. Marechal Tito 1500</h2>
+                        <h3>São MIguel Paulista</h3>
+                    </address>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="map">
+                    <div class="map-mask">
+                        <img src="public/unidade-3.jpg" alt="">
+                    </div>
+                    <address class="flex flex-col gap-1">
+                        <h2>Av. Marechal Tito 1500</h2>
+                        <h3>São MIguel Paulista</h3>
+                    </address>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="map">
+                    <div class="map-mask">
+                        <img src="public/slide-3.jpg" alt="">
+                    </div>
+                    <address class="flex flex-col gap-1">
+                        <h2>Av. Marechal Tito 1500</h2>
+                        <h3>São MIguel Paulista</h3>
+                    </address>
+                </div>
+            </swiper-slide>
+        </swiper-container>
 
 
 
@@ -162,7 +212,7 @@
             </p>
         </div>
     </footer>
-  
+
     <script>
         feather.replace();
         const menu = document.querySelector("dialog")
