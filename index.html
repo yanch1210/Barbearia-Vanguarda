@@ -55,7 +55,7 @@
         <div id="header=mask=spacer">
             <header>
                 <div role="logo" class="logo-hero"></div>
-                <h1>Barbearia <span>Vanguarda</span></h1>
+                <h1>Barbearia <br><span>Vanguarda</span></h1>
             </header>
 
             <div id="hero-slider" role="mask">
@@ -82,7 +82,7 @@
     <!-- seção a barbearia -->
     <section class="a-barbearia-section">
         <h1>A Barbearia</h1>
-        <div class="bolinhas"> </div>
+        <div class="bolinhas translate-y-center"> </div>
         <div role="mask" class="translate-y-center">
             <img src="public/A-Barbearia.jpg" alt="imgem de unidade da barbearia vanguarda" />
         </div>
@@ -199,7 +199,7 @@
     <footer>
         <div class="flex justify-between items-center">
             <div role="logo"></div>
-            <nav class="flex  gap-4">
+            <nav class="flex flex-col gap-8">
                 <a href="#">Contato</a>
                 <a href="#">Unidades</a>
                 <a href="#">Serviços</a>
@@ -222,7 +222,10 @@
         document.querySelector(".swiper-unidades").breakpoints = {
             400: {
                 spaceBetween: -116
-            }
+            },
+                768: {
+                spaceBetween: -356
+            },
         }
     </script>
 </body>
